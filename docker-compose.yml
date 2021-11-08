@@ -1,13 +1,15 @@
 version: '3'
 services:
   confluence:
-    build: .
+    # build: .
+    images: atlassian/confluence:latest
     ports: 
       - 8090:8090
       - 8091:8091
     env_file: .env
     volumes:
       - cfs-home:/var/atlassian/application-data/confluence
+      - .:/opt/atlassian/confluence/conf/server.xml:ro
 
 volumes:
   cfs-home:
