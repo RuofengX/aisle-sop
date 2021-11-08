@@ -6,11 +6,8 @@ services:
       - 80:8090
     env_file: .env
     volumes:
-      - type: volume
-        source: cfs-home
-        target: /var/atlassian/application-data/confluence
-        volume:
-          nocopy: true
+      - cfs-home:/var/atlassian/application-data/confluence
+
 volumes:
   cfs-home:
     driver_opts:
