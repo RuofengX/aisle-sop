@@ -9,7 +9,7 @@ services:
     env_file: .env
     volumes:
       - cfs-home:/var/atlassian/application-data/confluence
-      - .:/opt/atlassian/confluence/conf/server.xml:ro
+      - ./server.xml:/opt/atlassian/confluence/conf/server.xml:ro
 
 volumes:
   cfs-home:
