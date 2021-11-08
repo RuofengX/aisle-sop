@@ -1,7 +1,7 @@
 version: '3'
 services:
   confluence:
-    image: atlassian/confluence
+    build: .
     ports: 
       - 80:8090
     env_file: .env
