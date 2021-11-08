@@ -2,7 +2,7 @@ version: '3'
 services:
   confluence:
     # build: .
-    images: atlassian/confluence:latest
+    image: atlassian/confluence:latest
     ports: 
       - 8090:8090
       - 8091:8091
