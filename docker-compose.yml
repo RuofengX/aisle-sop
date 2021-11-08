@@ -3,7 +3,8 @@ services:
   confluence:
     build: .
     ports: 
-      - 80:8090
+      - 8090:8090
+      - 8091:8091
     env_file: .env
     volumes:
       - cfs-home:/var/atlassian/application-data/confluence
