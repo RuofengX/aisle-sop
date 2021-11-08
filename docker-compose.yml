@@ -1,0 +1,18 @@
+version: '3'
+services:
+  confluence:
+    image: 1ris/aisle-cos:latest
+    ports: 80:8090
+    env_file: .env
+    volumes:
+      - type: volume
+        source: cfs-btnibh3a
+        target: /var/atlassian/application-data/confluence
+        volume:
+          nocopy: true
+volumes:
+  cfs-btnibh3a:
+    driver_opts:
+      type: "nfs"
+      o: "addr=10.206.0.11,nolock,soft,rw"
+      device: ":/btnibh3a"
