@@ -17,8 +17,8 @@
                URIEncoding="UTF-8"
                secure="false"
                scheme="http"
-               proxyName=""
-               proxyPort=""
+               proxyName="sop.ruofengx.cn"
+               proxyPort="80"
                maxHttpHeaderSize="8192" />
 
 
